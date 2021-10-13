@@ -62,9 +62,15 @@ class Find extends Component {
 
     <header>
       <div >
-        <h1>Characters</h1>
+        <h1>Dictionary</h1>
       </div>
     </header>
+    <aside>
+        <form>
+          <label>Search</label>
+          <input type="text" value={ this.state.query} onChange={this.handleChange}/>
+        </form>
+      </aside>
 
     <main>
       <h3>{this.state.characterResults !== "00000" ? (this.state.characterResults.map(ch => 
@@ -73,18 +79,13 @@ class Find extends Component {
         </li>
         )
       ):
-      <li>
+     <div>
         <p>Add this value into the Dictionary</p>
         <button type="button" onClick={() => this.handleAddValue()}>Add</button>
-      </li>
+        </div>
       }
         </h3>
-      <aside>
-        <form>
-          <label>Search</label>
-          <input type="text" value={ this.state.query} onChange={this.handleChange}/>
-        </form>
-      </aside>
+      
     </main>
   </div>;
  }
