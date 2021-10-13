@@ -1,12 +1,10 @@
-
 import './App.css';
-
-import Search from './components/search';
+import Find from './components/find';
 
 function App() {
 
   return (
-    <Search/>
+    <Find/>
   );
 }
 
